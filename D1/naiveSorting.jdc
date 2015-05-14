@@ -1,0 +1,40 @@
+String str = System.console().readLine();
+int min = Integer.parseInt(str);
+str = System.console().readLine();
+int med = Integer.parseInt(str);
+str = System.console().readLine();
+int max = Integer.parseInt(str);
+
+int tmp;
+
+if (max < med) {
+	tmp = max;
+	max = med;
+	med = tmp;
+	if (med < min) {
+		tmp = med;
+		med = min;
+		min = tmp;
+		if (max < med) {
+			tmp = max;
+			max = med;
+			med = tmp;
+		}
+	}
+} else {
+	if (med < min) {
+		tmp = med;
+		med = min;
+		min = tmp;
+		if (max < med) {
+			tmp = max;
+			max = med;
+			med = tmp;
+		}
+	}
+}
+
+print(min + " " + med + " " + max);
+
+
+

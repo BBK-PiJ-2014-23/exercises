@@ -1,0 +1,10 @@
+int test = 0;
+
+String decimal2Hexadecimal(String decimal) {
+	
+	return decimal;
+}
+
+void hexadecimal2decimal(String hexadecimal) {
+	;
+}

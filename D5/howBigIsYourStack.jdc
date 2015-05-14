@@ -1,0 +1,17 @@
+stackOverflowString("0");
+
+void stackOverflowInt(int n) {
+	println(n);
+	stackOverflowInt(n + 1);
+}
+
+void stackOverflowDouble(double n) {
+	println(n);
+	stackOverflowDouble(n + 1);
+}
+
+void stackOverflowString(String n) {
+	int nInt = Integer.parseInt(n);
+	println(nInt);
+	stackOverflowString(Integer.toString(nInt + 1));
+}

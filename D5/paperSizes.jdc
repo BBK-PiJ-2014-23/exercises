@@ -1,0 +1,21 @@
+paper("A00");
+
+void paper(String size) {
+	int n = 0;
+	if (size.charAt(1) != '0') {
+		n = Integer.parseInt(size.substring(1, size.length()));
+		println(n);
+	} else {
+		n = -1 * (size.length() - 2);
+		println(n);
+	}
+	if (n < 0) {
+		int =
+		println("");
+		paper(size + "0";)
+	} else if (n > 0) {
+		println("");
+	} else {
+		println("Dimensions: 841mm x 1189mm");
+	}
+}

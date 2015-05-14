@@ -1,0 +1,29 @@
+boolean finished = false;
+String letter = "";
+String appeared = "";
+
+print("Please write a text: ");
+String str = System.console().readLine();
+
+while (!finished) {
+	print("Which letter would you like to count now? ");
+	letter = System.console().readLine();
+	for (int i = 0; i < appeared.length(); i++) {
+		if (letter.equals(appeared.substring(i, i + 1))) {
+			finished = true;
+		}
+	}
+	if (!finished) {
+		int counter = 0;
+		
+		for (int j = 0; j < str.length(); j++) {
+			if (letter.equals(str.substring(j, j + 1))) {
+				counter++;
+			}
+		}
+		println("There are " + counter + " in your text.");
+		appeared += letter;
+	}
+}
+println("Repeated character. Exiting the program...");
+println("Thank you for your cooperation. Good bye!");

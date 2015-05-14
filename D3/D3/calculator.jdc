@@ -1,0 +1,22 @@
+print("Enter a number: ");
+double num1 = Double.parseDouble(System.console().readLine());
+print("Enter another number: ");
+double num2 = Double.parseDouble(System.console().readLine());
+println("Enter operation: (1) Addition (2) Subtraction (3) Multiplication (4) Division");
+int operation = Integer.parseInt(System.console().readLine());
+double result = 0;
+
+if (operation == 1) {
+	result = num1 + num2;
+} else if (operation == 2) {
+	result = num1 - num2;
+} else if (operation == 3) {
+	result = num1 * num2;
+} else if (operation == 4) {
+	if (num2 != 0) {
+		result = num1 / num2;
+	} else {
+		println("Cannot divide by 0.");
+	}
+}
+print("Result: " + result);

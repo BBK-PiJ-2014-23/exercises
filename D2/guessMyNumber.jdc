@@ -1,0 +1,19 @@
+int numberToGuess = (int) (Math.abs(1000 * Math.random()));
+int guesses = 0;
+boolean finished = false;
+
+println("Try to guess my number!");
+while (!finished) {
+	print("Tell me a number: ");
+	int guess = Integer.parseInt(System.console().readLine());
+	if (guess == numberToGuess) {
+		finished = true;
+	} else if (guess < numberToGuess) {
+		println("No! My number is higher.");
+	} else {
+		println("No! My number is lower.");
+	}
+	guesses++;
+}
+println("CORRECT!");
+println("You needed " + guesses + ".");

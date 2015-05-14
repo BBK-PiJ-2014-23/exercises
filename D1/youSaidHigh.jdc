@@ -1,0 +1,25 @@
+String str = System.console().readLine();
+int input = Integer.parseInt(str);
+int last = input;
+boolean isConsec = true;
+boolean isUp = false;
+boolean isDown = false;
+
+while (input != -1) {
+	str = System.console().readLine();
+	input = Integer.parseInt(str);
+	if (input == last + 1) {
+		last = input;
+		isUp = true;
+	} else if (input == last - 1) {
+		last = input;
+		isDown = true;
+	} else if (input != -1) {
+		isConsec = false;
+	}
+}
+if (isConsec && (isUp != isDown)) {
+	println("Yes");
+} else {
+	println("No");
+}

@@ -1,0 +1,14 @@
+print("Enter anything you like: ");
+String str = System.console().readLine();
+boolean palindrome = true;
+
+for (int i = 0; i < str.length(); i++) {
+	if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
+		palindrome = false;
+	}
+}
+if (palindrome) {
+	println("Your input is a strict palindrome.");
+} else {
+	println("Your input is not a strict palindrome.");
+}

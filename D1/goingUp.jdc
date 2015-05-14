@@ -1,0 +1,19 @@
+String str = System.console().readLine();
+int input = Integer.parseInt(str);
+int last = input;
+boolean isConsecIncr = true;
+
+while (input != -1) {
+	str = System.console().readLine();
+	input = Integer.parseInt(str);
+	if (input == last + 1) {
+		last = input;
+	} else if (input != -1) {
+		isConsecIncr = false;
+	}
+}
+if (isConsecIncr) {
+	println("Yes");
+} else {
+	println("No");
+}

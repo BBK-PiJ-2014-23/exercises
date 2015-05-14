@@ -1,0 +1,24 @@
+println("Please enter x and y coordinates of two points defining a rectangle:");
+
+Rectangle rectangle = new Rectangle();
+rectangle.upLeft = new Point();
+rectangle.upLeft.x = Double.parseDouble(System.console().readLine());
+rectangle.upLeft.y = Double.parseDouble(System.console().readLine());
+rectangle.downRight = new Point();
+rectangle.downRight.x = Double.parseDouble(System.console().readLine());
+rectangle.downRight.y = Double.parseDouble(System.console().readLine());
+
+println("Please enter x and y coordinates of a third point:");
+Point point = new Point();
+point.x = Double.parseDouble(System.console().readLine());
+point.y = Double.parseDouble(System.console().readLine());
+
+String result = "";
+
+if (point.x <= rectangle.downRight.x && point.x >= rectangle.upLeft.x &&
+    point.y <= rectangle.upLeft.y && point.y >= rectangle.downRight.y) {
+	result = "inside";
+} else {
+	result = "outside";
+}
+println("The third point is " + result + " of the rectangle.");

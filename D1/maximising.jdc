@@ -1,0 +1,10 @@
+int max = 0;
+int input = 0;
+while (input != -1) {
+	String str = System.console().readLine();
+	input = Integer.parseInt(str);
+	if (input > max) {
+		max = input;
+	}
+}
+println(max);

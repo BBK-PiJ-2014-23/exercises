@@ -1,0 +1,16 @@
+String str = System.console().readLine();
+int num = Integer.parseInt(str);
+int i = num - 1;
+boolean isPrime = true;
+while (i > 1 && isPrime) {
+	if (num % i == 0) {
+		isPrime = false;
+	} else {
+		i--;
+	}
+}
+if (isPrime) {
+	println("Your number is a prime");
+} else {
+	println("Your number is not a prime");
+}

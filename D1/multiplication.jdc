@@ -1,0 +1,10 @@
+String str = System.console().readLine();
+int num1 = Integer.parseInt(str);
+str = System.console().readLine();
+int num2 = Integer.parseInt(str);
+int product = 0;
+while (num2 > 0) {
+	product += num1;
+	num2--;
+}
+println(product);

@@ -1,0 +1,9 @@
+println(hanoiTowers(6));
+
+int hanoiTowers(int discs) {
+	if (discs == 3) {
+		return 7;
+	} else {
+		return 2 * hanoiTowers(discs - 1) + 1;
+	}
+}

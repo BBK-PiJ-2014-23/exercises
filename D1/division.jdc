@@ -1,0 +1,14 @@
+String str = System.console().readLine();
+int divident = Integer.parseInt(str);
+str = System.console().readLine();
+int divisor = Integer.parseInt(str);
+
+int rest = divident;
+int i = 0;
+
+while (rest >= divisor) {
+	rest -= divisor;
+	i++;
+}
+println(divident + " divided by " + divisor + " is " + i + ", remainder " + rest + ".");
+	
